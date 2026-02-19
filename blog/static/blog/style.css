@@ -1,0 +1,247 @@
+/* ================= GLOBAL RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f7fb;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ================= MAIN CONTENT ================= */
+
+.site-content {
+    flex: 1;
+    padding: 50px 40px;
+}
+
+/* ================= HEADER ================= */
+
+header {
+    background: linear-gradient(135deg, #4e73df, #1cc88a);
+    padding: 12px 40px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+header h3 {
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+header a {
+    color: #ffffff !important;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+header a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #ffd369;
+    left: 0;
+    bottom: -3px;
+    transition: 0.3s ease;
+}
+
+header .container {
+        margin-left: 0px;
+}
+header a:hover::after {
+    width: 100%;
+}
+
+/* ================= PAGE TITLE ================= */
+
+h2 {
+    font-weight: 700;
+    color: #333;
+}
+
+/* ================= SEARCH BAR ================= */
+
+.input-group input {
+    border-radius: 30px 0 0 30px;
+    border: 1px solid #ddd;
+}
+
+.input-group button {
+    border-radius: 0 30px 30px 0;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    color: #fff;
+    border: none;
+    transition: 0.3s ease;
+}
+
+.input-group button:hover {
+    opacity: 0.9;
+}
+
+/* ================= CARD DESIGN ================= */
+
+.card {
+    border: none;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Equal Height */
+.col-md-4 {
+    display: flex;
+}
+
+.card-body {
+    flex: 1;
+    display: flex;
+    gap: 15px;
+}
+
+/* Image Styling */
+.img-fluid {
+    height: 110px;
+    width: 110px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+.card:hover .img-fluid {
+    transform: scale(1.05);
+}
+
+/* Card Text */
+.card-title {
+    font-weight: 600;
+    color: #4e73df;
+}
+
+.card-text {
+    font-size: 14px;
+    color: #555;
+}
+
+.card a {
+    text-decoration: none;
+    color: #1cc88a;
+    font-weight: 600;
+    margin-top: auto;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+
+/* ================= PAGINATION ================= */
+
+.custom-pagination .page-link {
+    border: none;
+    margin: 0 6px;
+    border-radius: 50px;
+    padding: 8px 18px;
+    font-weight: 500;
+    background: #f1f4ff;
+    color: #4e73df;
+    transition: all 0.3s ease;
+}
+
+.custom-pagination .page-link:hover {
+    background: linear-gradient(135deg, #4e73df, #1cc88a);
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.custom-pagination .current-page {
+    background: linear-gradient(135deg, #4e73df, #1cc88a);
+    color: #fff;
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+.custom-pagination .page-item.disabled .page-link {
+    background: #ddd;
+    color: #777;
+}
+
+.custom-pagination {
+    margin-top: 40px;
+}
+
+#paginationDiv {
+    margin-top:64;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #1f2937;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+    .site-content {
+        padding: 25px;
+    }
+
+    header {
+        padding: 15px 20px;
+    }
+
+    .card-body {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .img-fluid {
+        margin-bottom: 15px;
+    }
+}
+/* ================= PREMIUM FOOTER ================= */
+
+.footer {
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    color: #e2e8f0;
+    padding: 25px 0;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.footer span {
+    opacity: 0.9;
+    transition: 0.3s ease;
+}
+
+.footer span:hover {
+    opacity: 1;
+    color: #1cc88a;
+}

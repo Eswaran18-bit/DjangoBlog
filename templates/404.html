@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>React Hooks – Detailed Guide</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #1d2671, #c33764);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .banner {
+      background: #ffffff;
+      width: 92%;
+      max-width: 950px;
+      padding: 20px;
+      border-radius: 14px;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 14px;
+      font-size: 24px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .hook {
+      background: #f6f8ff;
+      border-left: 4px solid #6c63ff;
+      padding: 10px 12px;
+      border-radius: 6px;
+    }
+
+    .hook h2 {
+      margin: 0 0 6px;
+      color: #4f46e5;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .badge {
+      background: #e0e7ff;
+      color: #3730a3;
+      font-size: 10.5px;
+      padding: 2px 6px;
+      border-radius: 10px;
+      font-weight: 600;
+    }
+
+    .hook p {
+      margin: 0;
+      color: #333;
+      font-size: 12.8px;
+      line-height: 1.45;
+    }
+
+    .full {
+      grid-column: span 2;
+    }
+  </style>
+</head>
+<body>
+
+<div class="banner">
+  <h1>⚛️ React Hooks – Practical Overview</h1>
+
+  <div class="grid">
+
+    <div class="hook">
+      <h2>useState <span class="badge">STATE</span></h2>
+      <p>
+        Manages component state in functional components.
+        Returns state value and setter function.
+        Supports number, string, array, and object.
+      </p>
+    </div>
+
+    <div class="hook">
+      <h2>useEffect <span class="badge">SIDE EFFECT</span></h2>
+      <p>
+        Handles API calls, subscriptions, and timers.
+        Executes based on dependency array.
+      </p>
+    </div>
+
+    <div class="hook">
+      <h2>useEffect Dependencies <span class="badge">LIFECYCLE</span></h2>
+      <p>
+        No deps → every render (avoid).
+        Empty deps → once on mount.
+        With deps → runs on change.
+      </p>
+    </div>
+
+    <div class="hook">
+      <h2>useContext <span class="badge">GLOBAL STATE</span></h2>
+      <p>
+        Avoids props drilling by sharing data globally.
+        Create → Provider → Consume.
+      </p>
+    </div>
+
+    <div class="hook">
+      <h2>Props vs Context <span class="badge">COMPARISON</span></h2>
+      <p>
+        Props pass data manually through components.
+        Context provides direct access anywhere.
+      </p>
+    </div>
+
+    <div class="hook">
+      <h2>useRef <span class="badge">DOM</span></h2>
+      <p>
+        References DOM elements or mutable values.
+        Updating ref does not re-render component.
+      </p>
+    </div>
+
+    <div class="hook">
+      <h2>useMemo <span class="badge">PERFORMANCE</span></h2>
+      <p>
+        Memoizes expensive calculations.
+        Improves performance by avoiding recalculation.
+      </p>
+    </div>
+
+    <div class="hook">
+      <h2>useCallback <span class="badge">OPTIMIZATION</span></h2>
+      <p>
+        Memoizes functions.
+        Prevents unnecessary re-renders in child components.
+      </p>
+    </div>
+
+    <div class="hook">
+      <h2>Callback Function <span class="badge">FUNCTION</span></h2>
+      <p>
+        Function passed as an argument to another function.
+        Used in events and component communication.
+      </p>
+    </div>
+
+    <div class="hook">
+      <h2>Rules of Hooks <span class="badge">IMPORTANT</span></h2>
+      <p>
+        Call hooks only at top level.
+        Use hooks only inside functional components.
+      </p>
+    </div>
+
+    <div class="hook">
+      <h2>Common Mistakes <span class="badge">AVOID</span></h2>
+      <p>
+        Missing dependencies,
+        overusing useEffect,
+        unnecessary useMemo/useCallback.
+      </p>
+    </div>
+
+    <div class="hook full">
+      <h2>Why Hooks Matter <span class="badge">BEST PRACTICE</span></h2>
+      <p>
+        Hooks reduce boilerplate, improve readability,
+        enable logic reuse, and simplify state management.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

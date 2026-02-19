@@ -1,0 +1,168 @@
+{% extends "blog/base.html" %} {% block content %}
+
+<style>
+  /* ====== PAGE BACKGROUND ====== */
+  body {
+    background: linear-gradient(135deg, #f8f9fc, #e3f2fd);
+  }
+
+  /* ====== MAIN CONTAINER ====== */
+  .about-section {
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+  }
+{% comment %} Eswaran@2001 {% endcomment %}
+  .about-section:hover {
+    transform: translateY(-5px);
+  }
+
+  /* ====== HEADINGS ====== */
+  .about-title {
+    font-weight: 700;
+    color: #1e293b;
+  }
+
+  .about-subtitle {
+    color: #4e73df;
+    font-weight: 500;
+  }
+
+  /* ====== SKILL CARDS ====== */
+  .info-card {
+    background: #f8f9fc;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    transition: 0.3s ease;
+    height: 100%;
+  }
+
+  .info-card:hover {
+    transform: translateY(-8px);
+    background: linear-gradient(135deg, #4e73df, #1cc88a);
+    color: white;
+  }
+
+  .info-card:hover h4,
+  .info-card:hover li,
+  .info-card:hover p {
+    color: white;
+  }
+
+  /* ====== LIST STYLE ====== */
+  .info-card ul {
+    padding-left: 18px;
+  }
+
+  .info-card li {
+    margin-bottom: 8px;
+  }
+
+  /* ====== BUTTON STYLE ====== */
+  .custom-btn {
+    background: linear-gradient(90deg, #4e73df, #1cc88a);
+    border: none;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: 0.3s ease;
+  }
+
+  .custom-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+</style>
+
+<div class="container my-5">
+  <div class="about-section">
+    <div class="row mb-5 text-center">
+      <div class="col">
+        <h1 class="about-title">About Me</h1>
+        <p class="lead about-subtitle">
+          Passionate Backend Developer | Python & Django Enthusiast
+        </p>
+      </div>
+    </div>
+
+    <div class="row mb-5">
+      <div class="col-md-8 offset-md-2 text-center">
+        <p>
+          Hello! I'm <strong>Eswaran</strong>, a dedicated and self-motivated
+          backend developer specializing in Python and Django. I enjoy building
+          scalable web applications and solving real-world problems through
+          clean and efficient code.
+        </p>
+
+        <p>
+          My journey into web development started with a strong interest in how
+          websites work behind the scenes. Over time, I developed expertise in
+          backend technologies, database management, and API development.
+        </p>
+
+        <p>
+          I continuously improve my skills by working on real-world projects,
+          learning new technologies, and exploring modern development practices.
+        </p>
+      </div>
+    </div>
+
+    <div class="row mb-5 g-4">
+      <div class="col-md-4">
+        <div class="info-card">
+          <h4>💻 Technical Skills</h4>
+          <ul>
+            <li>Python Programming</li>
+            <li>Django Framework</li>
+            <li>REST API Development</li>
+            <li>MySQL / Database Design</li>
+            <li>HTML, CSS & Bootstrap</li>
+            <li>Git & Version Control</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="info-card">
+          <h4>🚀 What I Focus On</h4>
+          <ul>
+            <li>Clean and Maintainable Code</li>
+            <li>Backend Optimization</li>
+            <li>Scalable Web Applications</li>
+            <li>Problem Solving</li>
+            <li>Continuous Learning</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="info-card">
+          <h4>🎯 Career Goal</h4>
+          <p>
+            My goal is to become a highly skilled full-stack developer and
+            contribute to impactful technology solutions that improve user
+            experiences and business performance.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row text-center">
+      <div class="col">
+        <h4>Let's Build Something Amazing Together!</h4>
+        <p>
+          Feel free to connect with me for collaborations, backend development
+          projects, or learning opportunities.
+        </p>
+        <a href="{% url 'blog:contact' %}" class="btn custom-btn">
+          Contact Me
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
